@@ -1,10 +1,22 @@
 # Universo Loro
 
-Página estática en blanco, lista para importar en Vercel.
+Página índice estática con los proyectos del Universo Loro. Lista para desplegar en Vercel.
+
+## Proyectos enlazados
+
+| Proyecto | URL |
+| --- | --- |
+| Copiloto | https://loreado.vercel.app/copiloto |
+| Simulacro | https://loreado.vercel.app/mock |
+| Envía un Lorito | https://enviaunlorito.vercel.app/ |
 
 ## Estructura
 
-- `index.html` — la página. Todo el HTML, CSS y contenido viven acá.
+- `index.html` — la página completa. Todo el HTML, CSS y contenido viven acá.
+
+Para agregar un proyecto nuevo, copiá un bloque `<a class="card">` dentro de
+`<nav class="grid">` y cambiale el título, la descripción y la URL. La grilla se
+reacomoda sola.
 
 ## Importar en Vercel
 
