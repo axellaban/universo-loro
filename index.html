@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Creaciones del Loro, solo para divertirse y aprender. Cuatro proyectos hechos con IA." />
-    <meta name="theme-color" content="#f7f1e7" />
+    <meta name="description" content="Descubrí nuestras creaciones. Y si no las usas... ¡volvé a tu jaula! Loro!" />
+    <meta name="theme-color" content="#060d0c" />
     <meta property="og:title" content="Universo Loro" />
-    <meta property="og:description" content="Creaciones del Loro, solo para divertirse y aprender." />
+    <meta property="og:description" content="Descubrí nuestras creaciones. Y si no las usas... ¡volvé a tu jaula! Loro!" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_AR" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
@@ -17,14 +17,24 @@
 
   <body>
     <div class="atmosphere" aria-hidden="true">
-      <div class="blob blob--coral"></div>
-      <div class="blob blob--blue"></div>
-      <div class="blob blob--yellow"></div>
+      <div class="blob blob--green"></div>
+      <div class="blob blob--cyan"></div>
+      <div class="blob blob--pink"></div>
       <div class="cursor-glow"></div>
+      <svg class="flight-routes" viewBox="0 0 1440 860" preserveAspectRatio="none">
+        <path class="route route--one" d="M-40 185C220 8 374 286 632 138S1090 37 1500 228" />
+        <path class="route route--two" d="M-80 690C282 478 438 832 766 622s484-127 756 17" />
+        <path class="route route--three" d="M1075-50c-170 205-53 331 135 376s247 190 116 392" />
+        <circle class="route-node route-node--lime" cx="201" cy="98" r="5" />
+        <circle class="route-node route-node--cyan" cx="632" cy="138" r="5" />
+        <circle class="route-node route-node--pink" cx="1180" cy="169" r="5" />
+        <circle class="route-node route-node--yellow" cx="766" cy="622" r="5" />
+        <circle class="route-node route-node--cyan" cx="1327" cy="715" r="5" />
+      </svg>
       <span class="doodle doodle--one">✦</span>
-      <span class="doodle doodle--two">⌁</span>
-      <span class="doodle doodle--three">✳</span>
-      <span class="doodle doodle--four">···</span>
+      <span class="doodle doodle--two">✳</span>
+      <span class="doodle doodle--three">+</span>
+      <span class="doodle doodle--four">•••</span>
     </div>
 
     <main>
@@ -40,11 +50,11 @@
         </div>
 
         <h1>Universo <span>Loro<i aria-hidden="true"></i></span></h1>
-        <p>Creaciones del Loro, solo para divertirse y aprender.</p>
+        <p>Descubrí nuestras creaciones. Y si no las usas... ¡volvé a tu jaula! Loro!</p>
       </header>
 
       <section class="projects" aria-label="Proyectos hechos con IA">
-        <a class="project project--copiloto" href="https://loreado.vercel.app/copiloto" target="_blank" rel="noopener noreferrer" aria-label="Copiloto: abrir proyecto en una pestaña nueva">
+        <a class="project project--copiloto" href="https://loreado.vercel.app/copiloto" target="_blank" rel="noopener noreferrer" aria-label="Loreado: Copiloto: abrir proyecto en una pestaña nueva">
           <div class="project-visual" aria-hidden="true">
             <svg viewBox="0 0 320 160">
               <path class="sketch-line" d="M24 30c46-23 95-18 133-2M176 135c35 10 76 5 114-13" />
@@ -64,13 +74,13 @@
           </div>
           <div class="project-copy">
             <span class="project-number">01 · ESCUCHÁ</span>
-            <h2>Copiloto</h2>
+            <h2>Loreado: Copiloto</h2>
             <p>Te sopla qué responder mientras te entrevistan.</p>
-            <span class="project-link">Ver proyecto <span aria-hidden="true">↗</span></span>
+            <span class="project-link">Hackeá tu entrevista <span aria-hidden="true">↗</span></span>
           </div>
         </a>
 
-        <a class="project project--simulacro" href="https://loreado.vercel.app/mock" target="_blank" rel="noopener noreferrer" aria-label="Simulacro: abrir proyecto en una pestaña nueva">
+        <a class="project project--simulacro" href="https://loreado.vercel.app/mock" target="_blank" rel="noopener noreferrer" aria-label="Loreado: Simulacro: abrir proyecto en una pestaña nueva">
           <div class="project-visual" aria-hidden="true">
             <svg viewBox="0 0 320 160">
               <path class="sketch-line" d="M20 126c36 13 72 13 108 0M196 30c35-13 70-10 103 8" />
@@ -91,9 +101,9 @@
           </div>
           <div class="project-copy">
             <span class="project-number">02 · PRACTICÁ</span>
-            <h2>Simulacro</h2>
+            <h2>Loreado: Simulacro</h2>
             <p>Una IA te entrevista y después te dice la posta.</p>
-            <span class="project-link">Ver proyecto <span aria-hidden="true">↗</span></span>
+            <span class="project-link">Poneme a prueba <span aria-hidden="true">↗</span></span>
           </div>
         </a>
 
@@ -120,8 +130,8 @@
           <div class="project-copy">
             <span class="project-number">03 · MANDÁ</span>
             <h2>Envía un Lorito</h2>
-            <p>Mandás un mensaje. Un pájaro lo lleva lento.</p>
-            <span class="project-link">Ver proyecto <span aria-hidden="true">↗</span></span>
+            <p>Red social lenta e inútil. Mandás un mensaje. Un pájaro lo lleva lento.</p>
+            <span class="project-link">Mandá un lorito <span aria-hidden="true">↗</span></span>
           </div>
         </a>
 
@@ -148,16 +158,12 @@
           <div class="project-copy">
             <span class="project-number">04 · MOVETE</span>
             <h2>El Loro Corre</h2>
-            <p>Mové el cuerpo. La selva corre con vos.</p>
-            <span class="project-link">Jugar <span aria-hidden="true">↗</span></span>
+            <p>Videojuego. Mové el cuerpo. La selva corre con vos.</p>
+            <span class="project-link">Corré con él <span aria-hidden="true">↗</span></span>
           </div>
         </a>
       </section>
 
-      <footer>
-        <span>4 proyectos</span>
-        <span>Hechos para jugar</span>
-      </footer>
     </main>
   </body>
 </html>
