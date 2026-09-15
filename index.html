@@ -4,49 +4,129 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Creaciones del Loro, solo para divertirse y aprender. Tres experimentos hechos con IA." />
-    <meta name="theme-color" content="#fafbf8" />
+    <meta name="theme-color" content="#f7f1e7" />
     <meta property="og:title" content="Universo Loro" />
     <meta property="og:description" content="Creaciones del Loro, solo para divertirse y aprender." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_AR" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="/script.js" defer></script>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
     <title>Universo Loro</title>
   </head>
+
   <body>
     <div class="atmosphere" aria-hidden="true">
-      <div class="light light--mint"></div>
-      <div class="light light--sky"></div>
-      <div class="light light--sun"></div>
-      <div class="cursor-light"></div>
+      <div class="cursor-glow"></div>
+      <span class="doodle doodle--one">✦</span>
+      <span class="doodle doodle--two">⌁</span>
+      <span class="doodle doodle--three">✳</span>
+      <span class="doodle doodle--four">···</span>
     </div>
 
     <main>
       <header class="intro">
-        <h1>Universo Loro</h1>
+        <div class="wordmark" aria-hidden="true">
+          <svg viewBox="0 0 38 38">
+            <path d="M7 17C7 9.8 12.2 5 19 5c6.9 0 11.5 4.8 11.5 11.4v3.1H19.2C12.2 19.5 7 23.2 7 30V17Z" />
+            <circle cx="23" cy="12.7" r="2.7" class="eye" />
+            <path d="m30 14.5 7 3.7-7 4.2v-7.9Z" class="beak" />
+            <path d="M7 30c3.7-4 7.8-6 12.2-6h11.3v9H7v-3Z" class="wing" />
+          </svg>
+          <span>UNIVERSO_LORO</span>
+        </div>
+
+        <h1>Universo <span>Loro<i aria-hidden="true"></i></span></h1>
         <p>Creaciones del Loro, solo para divertirse y aprender.</p>
       </header>
 
       <section class="projects" aria-label="Proyectos hechos con IA">
-        <a class="project" href="https://loreado.vercel.app/copiloto" target="_blank" rel="noopener noreferrer" aria-label="Copiloto (abre en una pestaña nueva)">
-          <h2>Copiloto</h2>
-          <p>Tu copiloto de entrevistas con IA, en tiempo real.</p>
-          <span class="project-link">loreado.vercel.app/copiloto <span class="arrow" aria-hidden="true">→</span></span>
+        <a class="project project--copiloto" href="https://loreado.vercel.app/copiloto" target="_blank" rel="noopener noreferrer" aria-label="Copiloto: abrir experimento en una pestaña nueva">
+          <div class="project-visual" aria-hidden="true">
+            <svg viewBox="0 0 320 160">
+              <path class="sketch-line" d="M24 30c46-23 95-18 133-2M176 135c35 10 76 5 114-13" />
+              <g class="speech">
+                <path class="paper" d="M31 42h112a13 13 0 0 1 13 13v45a13 13 0 0 1-13 13H75l-20 17 4-17H31a13 13 0 0 1-13-13V55a13 13 0 0 1 13-13Z" />
+                <path class="wave" d="M47 82v-13m13 20V61m13 28V55m13 27V65m13 14v-8m13 18V58m13 26V66" />
+              </g>
+              <path class="travel" d="M166 79h29" />
+              <path class="travel-tip" d="m189 72 9 7-9 7" />
+              <g class="answer">
+                <rect class="paper" x="203" y="31" width="95" height="100" rx="15" />
+                <circle cx="221" cy="51" r="4" />
+                <path d="M232 51h42M221 75h56M221 89h46M221 103h51" />
+              </g>
+              <path class="spark" d="m278 16 3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8Z" />
+            </svg>
+          </div>
+          <div class="project-copy">
+            <span class="project-number">01 · ESCUCHA</span>
+            <h2>Copiloto</h2>
+            <p>Te sopla qué responder mientras te entrevistan.</p>
+            <span class="project-link">Abrir experimento <span aria-hidden="true">↗</span></span>
+          </div>
         </a>
 
-        <a class="project" href="https://loreado.vercel.app/mock" target="_blank" rel="noopener noreferrer" aria-label="Simulacro (abre en una pestaña nueva)">
-          <h2>Simulacro</h2>
-          <p>Practicá entrevistas con IA y feedback al instante.</p>
-          <span class="project-link">loreado.vercel.app/mock <span class="arrow" aria-hidden="true">→</span></span>
+        <a class="project project--simulacro" href="https://loreado.vercel.app/mock" target="_blank" rel="noopener noreferrer" aria-label="Simulacro: abrir experimento en una pestaña nueva">
+          <div class="project-visual" aria-hidden="true">
+            <svg viewBox="0 0 320 160">
+              <path class="sketch-line" d="M20 126c36 13 72 13 108 0M196 30c35-13 70-10 103 8" />
+              <g class="score">
+                <circle class="score-track" cx="91" cy="80" r="48" />
+                <circle class="score-fill" cx="91" cy="80" r="48" />
+                <path class="check" d="m70 80 14 14 29-32" />
+              </g>
+              <g class="feedback">
+                <path d="M173 48h92M173 69h72M173 90h84M173 111h56" />
+                <circle cx="157" cy="48" r="4" />
+                <circle cx="157" cy="69" r="4" />
+                <circle cx="157" cy="90" r="4" />
+                <circle cx="157" cy="111" r="4" />
+              </g>
+              <path class="spark" d="m286 104 3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8Z" />
+            </svg>
+          </div>
+          <div class="project-copy">
+            <span class="project-number">02 · PRACTICA</span>
+            <h2>Simulacro</h2>
+            <p>Una IA te entrevista y después te dice la posta.</p>
+            <span class="project-link">Abrir experimento <span aria-hidden="true">↗</span></span>
+          </div>
         </a>
 
-        <a class="project" href="https://enviaunlorito.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Envía un Lorito (abre en una pestaña nueva)">
-          <h2>Envía un Lorito</h2>
-          <p>Una red social lenta e inútil. Mensajes que tardan.</p>
-          <span class="project-link">enviaunlorito.vercel.app <span class="arrow" aria-hidden="true">→</span></span>
+        <a class="project project--lorito" href="https://enviaunlorito.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Envía un Lorito: abrir experimento en una pestaña nueva">
+          <div class="project-visual" aria-hidden="true">
+            <svg viewBox="0 0 320 160">
+              <path class="flight" d="M26 52c45-44 100 46 143-2 27-30 42-13 50 4" />
+              <circle class="flight-dot" cx="26" cy="52" r="3" />
+              <circle class="flight-dot" cx="219" cy="54" r="3" />
+              <g class="letter">
+                <rect class="paper" x="158" y="68" width="118" height="70" rx="7" />
+                <path d="m159 76 58 38 58-38" />
+              </g>
+              <g class="bird">
+                <ellipse class="bird-body" cx="225" cy="53" rx="29" ry="32" />
+                <path class="bird-wing" d="M217 49c-24 1-37 15-35 34 20 0 37-9 43-25Z" />
+                <circle class="bird-eye" cx="236" cy="43" r="4" />
+                <circle class="bird-shine" cx="237.2" cy="41.8" r="1.2" />
+                <path class="bird-beak" d="m251 48 19 9-19 10V48Z" />
+              </g>
+              <path class="sketch-line" d="M34 126c31 8 57 6 82-6" />
+            </svg>
+          </div>
+          <div class="project-copy">
+            <span class="project-number">03 · ESPERA</span>
+            <h2>Envía un Lorito</h2>
+            <p>Mandás un mensaje. Un pájaro lo lleva lento.</p>
+            <span class="project-link">Abrir experimento <span aria-hidden="true">↗</span></span>
+          </div>
         </a>
       </section>
+
+      <footer>
+        <span>3 experimentos</span>
+        <span>100% curiosidad</span>
+      </footer>
     </main>
   </body>
 </html>
