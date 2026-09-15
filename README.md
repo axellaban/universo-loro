@@ -9,6 +9,7 @@ Página índice estática con los proyectos del Universo Loro. Lista para desple
 | Copiloto | https://loreado.vercel.app/copiloto |
 | Simulacro | https://loreado.vercel.app/mock |
 | Envía un Lorito | https://enviaunlorito.vercel.app/ |
+| El Loro Corre | https://el-loro-corre.vercel.app/ |
 
 ## Estructura
 
