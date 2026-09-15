@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="spectrum" x1="140" y1="920" x2="1570" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5964db" stop-opacity="0"/>
+      <stop offset=".2" stop-color="#7270ee" stop-opacity=".55"/>
+      <stop offset=".46" stop-color="#20bcd3" stop-opacity=".8"/>
+      <stop offset=".7" stop-color="#4ae6ab"/>
+      <stop offset=".88" stop-color="#acdf65" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#acdf65" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="cloud" x="-40%" y="-80%" width="180%" height="260%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".004 .009" numOctaves="3" seed="6" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="180" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="filament" x="-40%" y="-80%" width="180%" height="260%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".006 .015" numOctaves="2" seed="12" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="85" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <radialGradient id="mist">
+      <stop stop-color="#4868bf" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#4868bf" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="1100" cy="520" rx="600" ry="420" fill="url(#mist)"/>
+  <g stroke="url(#spectrum)" filter="url(#cloud)">
+    <path d="M-100 940C330 1110 710 730 970 480S1260 270 1720 40" stroke-width="130" opacity=".48"/>
+    <path d="M-100 850C350 1010 700 760 1020 420S1450 230 1730 80" stroke-width="65" opacity=".55"/>
+    <path d="M0 1000C500 1050 850 850 1100 560S1510 340 1760 160" stroke-width="45" opacity=".4"/>
+  </g>
+  <g stroke="url(#spectrum)" filter="url(#filament)" opacity=".3">
+    <path d="M-100 935C330 1050 750 765 960 475S1370 280 1720 40" stroke-width="9"/>
+    <path d="M-80 960C470 1100 740 820 1090 490S1410 300 1760 160" stroke-width="4"/>
+    <path d="M400 890C800 850 990 370 1420 250" stroke-width="3"/>
+  </g>
+</svg>

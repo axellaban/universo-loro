@@ -1,13 +1,39 @@
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 const root = document.documentElement;
-const doodles = document.querySelectorAll(".doodle");
 const projects = document.querySelectorAll(".project");
 let frame = 0;
 let targetX = window.innerWidth * 0.7;
 let targetY = window.innerHeight * 0.15;
 
 const effectsEnabled = () => !reduceMotion.matches && finePointer.matches;
+
+// Build the sky once. CSS moves three layers, without a continuous JS loop.
+let starSeed = 6;
+function starRandom() {
+  starSeed = (starSeed * 1664525 + 1013904223) >>> 0;
+  return starSeed / 4294967296;
+}
+
+document.querySelectorAll(".star-field").forEach((layer, depth) => {
+  const stars = document.createDocumentFragment();
+  const colors = ["#cadbec", "#a2e6dc", "#a7bbee", "#ece6ce"];
+
+  for (let index = 0; index < Number(layer.dataset.stars); index += 1) {
+    const star = document.createElement("span");
+    const bright = depth === 2 && index % 5 === 0;
+    star.className = bright ? "star star--bright" : "star";
+    star.style.setProperty("--x", `${(starRandom() * 100).toFixed(2)}%`);
+    star.style.setProperty("--y", `${(starRandom() * 100).toFixed(2)}%`);
+    star.style.setProperty("--size", `${(.6 + depth * .4 + starRandom() * .8).toFixed(2)}px`);
+    star.style.setProperty("--opacity", (.3 + starRandom() * .6).toFixed(2));
+    star.style.setProperty("--starlight", colors[Math.floor(starRandom() * colors.length)]);
+    star.style.setProperty("--delay", `${(-starRandom() * 10).toFixed(2)}s`);
+    stars.append(star);
+  }
+
+  layer.replaceChildren(stars);
+});
 
 function renderPointer() {
   frame = 0;
@@ -18,11 +44,8 @@ function renderPointer() {
 
   const horizontal = targetX / window.innerWidth - 0.5;
   const vertical = targetY / window.innerHeight - 0.5;
-  doodles.forEach((doodle, index) => {
-    const depth = (index + 1) * 4;
-    doodle.style.translate = `${horizontal * depth}px ${vertical * depth}px`;
-    doodle.style.rotate = `${horizontal * (index % 2 ? -5 : 5)}deg`;
-  });
+  root.style.setProperty("--space-x", `${horizontal * -24}px`);
+  root.style.setProperty("--space-y", `${vertical * -18}px`);
 
   projects.forEach((project) => {
     const rect = project.getBoundingClientRect();
@@ -41,9 +64,8 @@ document.addEventListener("pointermove", (event) => {
 function resetEffects() {
   cancelAnimationFrame(frame);
   frame = 0;
-  doodles.forEach((doodle) => {
-    doodle.style.removeProperty("translate");
-    doodle.style.removeProperty("rotate");
+  ["--space-x", "--space-y", "--pointer-x", "--pointer-y"].forEach((property) => {
+    root.style.removeProperty(property);
   });
   projects.forEach((project) => {
     project.style.removeProperty("--card-x");
@@ -53,7 +75,9 @@ function resetEffects() {
 
 window.addEventListener("blur", resetEffects);
 document.addEventListener("visibilitychange", () => {
+  root.toggleAttribute("data-motion-paused", document.hidden);
   if (document.hidden) resetEffects();
 });
+root.toggleAttribute("data-motion-paused", document.hidden);
 reduceMotion.addEventListener("change", resetEffects);
 finePointer.addEventListener("change", resetEffects);
