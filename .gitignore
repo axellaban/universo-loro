@@ -1,5 +1,21 @@
-.codex/
-.DS_Store
+# Dependencias
 node_modules/
-.vercel/
 dist/
+
+# Vercel
+.vercel/
+
+# Entorno
+.env
+.env.local
+.env.*.local
+
+# Codex
+.codex/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
